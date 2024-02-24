@@ -10,7 +10,7 @@ function App() {
 
 // let [variable, functionByReactToUpdate that variable in the UI ] = useState( /* default value of a variable */)
 
-  let [counter, setCounter] = useState(0)
+  let [counter, setCounter] = useState(15)
 
   // let counter = 5;
 
@@ -19,7 +19,20 @@ function App() {
     // console.log(counter);
     // setCounter(counter)
    if(counter < 20) { 
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+// koi fayda nhi hai kyuki itna likhne k bdd v bs 1 hi brr value increment hogi jaisa ki hmne psdha tha ki fibre ki madad se react batches me kaam krta hai or intermediate state ko eliminate krta hai, sidha final state pr jata hai.
+
+// or agr tmko krna hi hai sath me charo update to aisa kro 
+// setCounter deta hai hme callback isiliye hmne prevcounter uttha liya jo ki directly hmko previous tk k counter ki value dedega 
+// prevCounter last updated value hoti hai. kyuki setCounter return krta hai ek callback function.
+setCounter(prevCounter => prevCounter + 1);
+setCounter(prevCounter => prevCounter + 1);
+// setCounter(prevCounter => prevCounter + 1);
+// setCounter(prevCounter => prevCounter + 1);
+// setCounter(prevCounter => prevCounter + 1);
    }
 
   }
